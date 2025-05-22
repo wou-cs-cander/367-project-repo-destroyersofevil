@@ -1,43 +1,43 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\ander\\OneDrive\\Documents\\CS_367_1\\CS367_Final_Project\\367-project-repo-destroyersofevil\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\367-project-repo-destroyersofevil.bundle.scp.css",
+      "Id": "c:\\Users\\phils\\CS367\\367-project-repo-destroyersofevil\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\367-project-repo-destroyersofevil.bundle.scp.css",
       "PackagePath": "staticwebassets\\367-project-repo-destroyersofevil.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\ander\\OneDrive\\Documents\\CS_367_1\\CS367_Final_Project\\367-project-repo-destroyersofevil\\wwwroot\\css\\site.css",
+      "Id": "c:\\Users\\phils\\CS367\\367-project-repo-destroyersofevil\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\ander\\OneDrive\\Documents\\CS_367_1\\CS367_Final_Project\\367-project-repo-destroyersofevil\\wwwroot\\js\\site.js",
+      "Id": "c:\\Users\\phils\\CS367\\367-project-repo-destroyersofevil\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\ander\\OneDrive\\Documents\\CS_367_1\\CS367_Final_Project\\367-project-repo-destroyersofevil\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "c:\\Users\\phils\\CS367\\367-project-repo-destroyersofevil\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\ander\\OneDrive\\Documents\\CS_367_1\\CS367_Final_Project\\367-project-repo-destroyersofevil\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "c:\\Users\\phils\\CS367\\367-project-repo-destroyersofevil\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\ander\\OneDrive\\Documents\\CS_367_1\\CS367_Final_Project\\367-project-repo-destroyersofevil\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "c:\\Users\\phils\\CS367\\367-project-repo-destroyersofevil\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\ander\\OneDrive\\Documents\\CS_367_1\\CS367_Final_Project\\367-project-repo-destroyersofevil\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "c:\\Users\\phils\\CS367\\367-project-repo-destroyersofevil\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\ander\\OneDrive\\Documents\\CS_367_1\\CS367_Final_Project\\367-project-repo-destroyersofevil\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "c:\\Users\\phils\\CS367\\367-project-repo-destroyersofevil\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\ander\\OneDrive\\Documents\\CS_367_1\\CS367_Final_Project\\367-project-repo-destroyersofevil\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "c:\\Users\\phils\\CS367\\367-project-repo-destroyersofevil\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\ander\\OneDrive\\Documents\\CS_367_1\\CS367_Final_Project\\367-project-repo-destroyersofevil\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "c:\\Users\\phils\\CS367\\367-project-repo-destroyersofevil\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
