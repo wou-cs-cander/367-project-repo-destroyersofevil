@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace WorkoutGeneratorApp.Controllers
+namespace _367_project_repo_destroyersofevil.Controllers
 {
     public class HomeController : Controller
     {
@@ -8,5 +8,11 @@ namespace WorkoutGeneratorApp.Controllers
         {
             return View();
         }
+
+        public IActionResult About()
+        {
+            return View();
+        }
     }
 }
+
