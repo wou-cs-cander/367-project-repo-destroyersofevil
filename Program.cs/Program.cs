@@ -1,4 +1,9 @@
+using _367_project_repo_destroyersofevil.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Register your ExerciseApiService with HttpClient here
+builder.Services.AddHttpClient<ExerciseApiService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -12,8 +17,5 @@ app.UseRouting();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-builder.Services.AddHttpClient<ExerciseApiService>();
-
 
 app.Run();
