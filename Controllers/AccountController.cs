@@ -19,7 +19,7 @@ namespace _367_project_repo_destroyersofevil.Controllers
                 // Replace with real authentication
                 if (model.Email == "test@example.com" && model.Password == "password")
                 {
-                    // Normally use Claims and SignInManager
+                    
                     return RedirectToAction("Index", "Home");
                 }
 
