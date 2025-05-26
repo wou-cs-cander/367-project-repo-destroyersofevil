@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("367-project-repo-destroyersofevil")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d7fa8d45583512cb4c8bb60fa2c2a94620576fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a38963d17e2cc20c319ca90628f536c1cc32207e")]
 [assembly: System.Reflection.AssemblyProductAttribute("367-project-repo-destroyersofevil")]
 [assembly: System.Reflection.AssemblyTitleAttribute("367-project-repo-destroyersofevil")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

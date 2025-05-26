@@ -1,28 +1,51 @@
+using _367_project_repo_destroyersofevil.Data;
+using Microsoft.EntityFrameworkCore;
 using _367_project_repo_destroyersofevil.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;   // ← Add this!
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Register your ExerciseApiService with HttpClient here
+// 1) Data & MVC
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))
+);
+builder.Services.AddControllersWithViews();
+
+// 2) External API service
 builder.Services.AddHttpClient<ExerciseApiService>();
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+// 3) Authentication & Authorization
+builder.Services
+    .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath  = "/Account/Login";
+        options.LogoutPath = "/Account/Logout";
+    });
+
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-
-if (app.Environment.IsDevelopment())
+// 4) Error pages & static files
+if (!app.Environment.IsDevelopment())
 {
-    app.UseDeveloperExceptionPage();
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
 }
-
+//app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseRouting();
 
+// 5) Routing + Auth (in this exact order)
+app.UseRouting();           // ← first
+app.UseAuthentication();    // ← then authentication
+app.UseAuthorization();     // ← then authorization
 
-
+// 6) Map controllers
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}"
+);
 
 app.Run();
+
