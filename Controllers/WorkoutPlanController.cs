@@ -16,7 +16,7 @@ namespace _367_project_repo_destroyersofevil.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            return View(new WorkoutPlanViewModel());
         }
 
         [HttpPost]
@@ -28,22 +28,22 @@ namespace _367_project_repo_destroyersofevil.Controllers
             var allExercises = await _exerciseService.GetExercisesAsync();
 
             // Simple filter by equipment and number of days
-           var equipmentList = model.AvailableEquipment?
+            var equipmentList = model.AvailableEquipment?
                 .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
                 .Select(e => e.ToLower())
                 .ToList() ?? new List<string>();
 
             var matchingExercises = allExercises
                 .Where(e =>
-            !string.IsNullOrEmpty(e.Equipment) &&
-                equipmentList.Any(eq => e.Equipment.ToLower().Contains(eq)))
+                    !string.IsNullOrEmpty(e.Equipment) &&
+                    equipmentList.Any(eq => e.Equipment.ToLower().Contains(eq)))
                 .Take(model.WorkoutDaysPerWeek * 3)
                 .ToList();
 
             model.GeneratedExercises = matchingExercises;
 
-
             return View("Result", model);
         }
     }
 }
+

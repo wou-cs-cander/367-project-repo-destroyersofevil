@@ -47,8 +47,10 @@ namespace _367_project_repo_destroyersofevil.Controllers
         [HttpGet]
         public IActionResult Register()
         {
-            return View();
+            return View(new RegisterViewModel());
         }
+
+
 
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)

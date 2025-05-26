@@ -1,21 +1,26 @@
 using Microsoft.AspNetCore.Mvc;
 using _367_project_repo_destroyersofevil.Services;
 
-namespace _367_project_repo_destroyersofevil.Controllers
+public class WorkoutController : Controller
 {
-    public class WorkoutController : Controller
+    private readonly ExerciseApiService _exerciseService;
+
+    public WorkoutController(ExerciseApiService exerciseService)
     {
-        private readonly ExerciseApiService _exerciseService;
+        _exerciseService = exerciseService;
+    }
 
-        public WorkoutController(ExerciseApiService exerciseService)
+    public async Task<IActionResult> Index()
+    {
+        var exercises = await _exerciseService.GetExercisesAsync();
+
+        if (exercises == null || !exercises.Any())
         {
-            _exerciseService = exerciseService;
+            
+            ViewBag.Error = "No exercises found from the API.";
         }
 
-        public async Task<IActionResult> Index()
-        {
-            var exercises = await _exerciseService.GetExercisesAsync();
-            return View(exercises);
-        }
+        return View(exercises);
     }
 }
+
