@@ -13,6 +13,9 @@ namespace _367_project_repo_destroyersofevil.Models
         [Range(1, 7, ErrorMessage = "Workout days per week must be between 1 and 7.")]
         public int WorkoutDaysPerWeek { get; set; }
 
+        public List<Exercise>? GeneratedExercises { get; set; }
+
+
         
     }
 }
