@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using _367_project_repo_destroyersofevil.Models;
 
-namespace _367_project_repo_destroyersofevil.Data // ← Add this line
+namespace _367_project_repo_destroyersofevil.Data 
 {
     public class ApplicationDbContext : DbContext
     {

@@ -29,12 +29,18 @@ namespace _367_project_repo_destroyersofevil.Services
                 }
             };
 
-            using var response = await _httpClient.SendAsync(request);
-            response.EnsureSuccessStatusCode();
-            var json = await response.Content.ReadAsStringAsync();
+          var response = await _httpClient.SendAsync(request);
 
-            var exercises = JsonSerializer.Deserialize<List<Exercise>>(json);
-            return exercises ?? new List<Exercise>();
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                return JsonSerializer.Deserialize<List<Exercise>>(json, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                }) ?? new List<Exercise>();
+            }
+
+            return new List<Exercise>();
         }
     }
 }
