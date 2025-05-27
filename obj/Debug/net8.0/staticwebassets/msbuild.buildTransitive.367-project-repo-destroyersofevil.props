@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\367-project-repo-destroyersofevil.props" />
-</Project>
