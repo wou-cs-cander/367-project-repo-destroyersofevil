@@ -6,28 +6,46 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h1>Welcome to the Fitness App</h1>
+<style>
+    .center-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* vertical centering */
+        align-items: center;     /* horizontal centering */
+        min-height: 100vh;
+        text-align: center;
+    }
 
-<form asp-controller="Account" asp-action="Login" method="post">
-    @Html.AntiForgeryToken()
+    .form-box {
+        width: 100%;
+        max-width: 400px;
+    }
+</style>
 
-    <div class="form-group">
-        <label asp-for="Email"></label>
-        <input asp-for="Email" class="form-control" />
-        <span asp-validation-for="Email" class="text-danger"></span>
+<div class="center-container">
+    <h1>Welcome to the Fitness App</h1>
+
+    <div class="form-box">
+        <form asp-controller="Account" asp-action="Login" method="post">
+            @Html.AntiForgeryToken()
+
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" type="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+        <p>
+            Don't have an account? <a asp-controller="Account" asp-action="Register">Register here</a>
+        </p>
     </div>
-
-    <div class="form-group">
-        <label asp-for="Password"></label>
-        <input asp-for="Password" type="password" class="form-control" />
-        <span asp-validation-for="Password" class="text-danger"></span>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Login</button>
-</form>
-
-<p>
-    Don't have an account? <a asp-controller="Account" asp-action="Register">Register here</a>
-</p>
-
-
+</div>
