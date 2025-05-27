@@ -1,0 +1,49 @@
+@model _367_project_repo_destroyersofevil.Models.WorkoutPlanViewModel
+
+@{
+    ViewData["Title"] = "Your Workout Plan";
+}
+
+<h2>Your Personalized Workout Plan</h2>
+
+<div>
+    <p><strong>Goal:</strong> @Model.Goal</p>
+    <p><strong>Available Equipment:</strong> @Model.AvailableEquipment</p>
+    <p><strong>Workout Days Per Week:</strong> @Model.WorkoutDaysPerWeek</p>
+</div>
+
+@if (Model.GeneratedExercises != null && Model.GeneratedExercises.Any())
+{
+    <h3>Exercises</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Target</th>
+                <th>Body Part</th>
+                <th>Equipment</th>
+                <th>GIF</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var exercise in Model.GeneratedExercises)
+        {
+            <tr>
+                <td>@exercise.Name</td>
+                <td>@exercise.Target</td>
+                <td>@exercise.BodyPart</td>
+                <td>@exercise.Equipment</td>
+                <td>
+                    <img src="@exercise.GifUrl" alt="Exercise GIF" width="100" />
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No exercises matched your criteria. Try adjusting your equipment or workout days.</p>
+}
+
+<a class="btn btn-secondary" href="/WorkoutPlan/Create">Create Another Plan</a>

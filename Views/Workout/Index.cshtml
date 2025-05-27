@@ -1,0 +1,85 @@
+@model IEnumerable<_367_project_repo_destroyersofevil.Models.Exercise>
+
+@{
+    ViewData["Title"] = "Exercises";
+}
+
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
+
+    .center-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #f3f4f6;
+        padding: 20px;
+    }
+
+    .exercise-container {
+        width: 90%;
+        max-width: 1000px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .exercise-table th {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+    }
+
+    .exercise-table td {
+        vertical-align: middle;
+    }
+
+    .exercise-title {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+</style>
+
+<div class="center-wrapper">
+    <div class="exercise-container">
+        <h2 class="exercise-title">💪 Available Exercises</h2>
+
+        @if (!Model.Any())
+        {
+            <div class="alert alert-warning text-center">
+                No exercises found. Please try again later.
+            </div>
+        }
+        else
+        {
+            <table class="table table-bordered table-striped exercise-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Body Part</th>
+                        <th>Equipment</th>
+                        <th>Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var exercise in Model)
+                    {
+                        <tr>
+                            <td>@exercise.Name</td>
+                            <td>@exercise.BodyPart</td>
+                            <td>@exercise.Equipment</td>
+                            <td>@exercise.Target</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+
+

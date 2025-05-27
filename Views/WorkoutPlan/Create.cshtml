@@ -1,0 +1,37 @@
+@using _367_project_repo_destroyersofevil.Models
+@model _367_project_repo_destroyersofevil.Models.WorkoutPlanViewModel
+
+
+@{
+    ViewData["Title"] = "Create Workout Plan";
+}
+
+<h2>Create Your Workout Plan</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Goal" class="control-label">Fitness Goal</label>
+        <select asp-for="Goal" class="form-control" asp-items="Html.GetEnumSelectList<FitnessGoal>()">
+            <option value="">Select a goal</option>
+        </select>
+        <span asp-validation-for="Goal" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AvailableEquipment" class="control-label">Available Equipment</label>
+        <input asp-for="AvailableEquipment" class="form-control" placeholder="e.g., Dumbbells, Resistance Bands" />
+        <span asp-validation-for="AvailableEquipment" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="WorkoutDaysPerWeek" class="control-label">Workout Days per Week</label>
+        <input asp-for="WorkoutDaysPerWeek" type="number" class="form-control" min="1" max="7" />
+        <span asp-validation-for="WorkoutDaysPerWeek" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Generate Plan</button>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

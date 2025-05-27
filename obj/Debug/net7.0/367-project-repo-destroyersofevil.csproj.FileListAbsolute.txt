@@ -1,0 +1,10 @@
+C:\Users\ander\OneDrive\Documents\CS_367_1\CS367_Final_Project\367-project-repo-destroyersofevil\obj\Debug\net7.0\367-project-repo-destroyersofevil.csproj.AssemblyReference.cache
+C:\Users\ander\OneDrive\Documents\CS_367_1\CS367_Final_Project\367-project-repo-destroyersofevil\obj\Debug\net7.0\367-project-repo-destroyersofevil.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ander\OneDrive\Documents\CS_367_1\CS367_Final_Project\367-project-repo-destroyersofevil\obj\Debug\net7.0\367-project-repo-destroyersofevil.AssemblyInfoInputs.cache
+C:\Users\ander\OneDrive\Documents\CS_367_1\CS367_Final_Project\367-project-repo-destroyersofevil\obj\Debug\net7.0\367-project-repo-destroyersofevil.AssemblyInfo.cs
+C:\Users\ander\OneDrive\Documents\CS_367_1\CS367_Final_Project\367-project-repo-destroyersofevil\obj\Debug\net7.0\367-project-repo-destroyersofevil.csproj.CoreCompileInputs.cache
+C:\Users\ander\OneDrive\Documents\CS_367_1\CS367_Final_Project\367-project-repo-destroyersofevil\obj\Debug\net7.0\367-project-repo-destroyersofevil.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ander\OneDrive\Documents\CS_367_1\CS367_Final_Project\367-project-repo-destroyersofevil\obj\Debug\net7.0\367-project-repo-destroyersofevil.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ander\OneDrive\Documents\CS_367_1\CS367_Final_Project\367-project-repo-destroyersofevil\obj\Debug\net7.0\367-project-repo-destroyersofevil.RazorAssemblyInfo.cache
+C:\Users\ander\OneDrive\Documents\CS_367_1\CS367_Final_Project\367-project-repo-destroyersofevil\obj\Debug\net7.0\367-project-repo-destroyersofevil.RazorAssemblyInfo.cs
+C:\Users\ander\OneDrive\Documents\CS_367_1\CS367_Final_Project\367-project-repo-destroyersofevil\obj\Debug\net7.0\367-project-repo-destroyersofevil.sourcelink.json
