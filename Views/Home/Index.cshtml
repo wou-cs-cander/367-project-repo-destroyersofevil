@@ -1,78 +1,33 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
+@model _367_project_repo_destroyersofevil.Models.LoginViewModel
 
 @{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "Home Page";
 }
 
-<style>
-    .centered-container {
-        min-height: 80vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* vertical center */
-        align-items: center;    /* horizontal center */
-        text-align: center;
-    }
+<h1>Welcome to the Fitness App</h1>
 
-    .button-group {
-        margin-top: 20px;
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-    }
+<form asp-controller="Account" asp-action="Login" method="post">
+    @Html.AntiForgeryToken()
 
-    .login-form {
-        margin-top: 40px;
-        border: 1px solid #ccc;
-        padding: 20px;
-        border-radius: 8px;
-        width: 300px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .login-form label,
-    .login-form input {
-        display: block;
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .login-form input[type="submit"] {
-        margin-top: 10px;
-    }
-
-    .register-link {
-        margin-top: 10px;
-        display: block;
-        font-size: 0.9rem;
-    }
-</style>
-
-<div class="centered-container">
-    <h1>Welcome to the Workout Generator!</h1>
-    <p>Start building your personalized workouts today.</p>
-
-    <div class="button-group">
-        <a class="btn btn-primary" href="/Workout">Browse Exercises</a>
-        <a class="btn btn-secondary" href="/">Home</a>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
 
-    <form class="login-form" method="post" action="/Account/Login">
-        <h3>Login</h3>
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" placeholder="Enter username" required />
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
 
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Enter password" required />
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
 
-        <input type="submit" class="btn btn-success" value="Login" />
-
-       <a href="/Account/Register" class="register-link">Don't have an account? Create one here.</a>
-
-
-
-    </form>
-</div>
+<p>
+    Don't have an account? <a asp-controller="Account" asp-action="Register">Register here</a>
+</p>
 
 

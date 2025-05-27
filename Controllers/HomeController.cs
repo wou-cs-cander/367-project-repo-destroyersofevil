@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using _367_project_repo_destroyersofevil.Models;
 
 namespace _367_project_repo_destroyersofevil.Controllers
 {
@@ -6,7 +7,7 @@ namespace _367_project_repo_destroyersofevil.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(new LoginViewModel());
         }
 
         public IActionResult About()
@@ -15,4 +16,3 @@ namespace _367_project_repo_destroyersofevil.Controllers
         }
     }
 }
-
