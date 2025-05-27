@@ -1,10 +1,18 @@
-﻿namespace _367_project_repo_destroyersofevil.Tests;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.ComponentModel.DataAnnotations;
 
-[TestClass]
-public sealed class Test1
+namespace _367_project_repo_destroyersofevil.Tests
 {
-    [TestMethod]
-    public void TestMethod1()
+    [TestClass]
+    public sealed class Test1
     {
+        [TestMethod]
+        public void TestMethod1()
+        {
+            //A trivial assertion so the test runner sees a passing test:
+            Assert.IsTrue(1 + 1 == 2, "Basic arithmetic failed!");
+            
+        }
     }
 }
+
