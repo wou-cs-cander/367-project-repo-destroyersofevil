@@ -4,6 +4,7 @@
 - Areli
 - Erin
 - Philip S
+- Arin P
 
 
 **Project Overview**
