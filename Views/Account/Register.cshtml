@@ -4,39 +4,66 @@
     ViewData["Title"] = "Register";
 }
 
-<div class="register-container">
-    <h2>Create New Account</h2>
+<style>
+    .center-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+    }
 
-    <form asp-action="Register" method="post">
-       
-        @Html.AntiForgeryToken()
+    .register-container {
+        width: 100%;
+        max-width: 400px;
+        padding: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        background-color: #fff;
+    }
 
-        
-        <div asp-validation-summary="All" class="alert alert-danger"></div>
+    .text-link {
+        display: block;
+        margin-top: 1rem;
+    }
+</style>
 
-       
-        <div class="form-group">
-            <label asp-for="Email"></label>
-            <input asp-for="Email" class="form-control" />
-            <span asp-validation-for="Email" class="text-danger"></span>
-        </div>
+<div class="center-container">
+    <div class="register-container">
+        <h2>Create New Account</h2>
 
-        <div class="form-group">
-            <label asp-for="Password"></label>
-            <input asp-for="Password" type="password" class="form-control" />
-            <span asp-validation-for="Password" class="text-danger"></span>
-        </div>
+        <form asp-action="Register" method="post">
+            @Html.AntiForgeryToken()
 
-        <div class="form-group">
-            <label asp-for="ConfirmPassword"></label>
-            <input asp-for="ConfirmPassword" type="password" class="form-control" />
-            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-        </div>
+            <div asp-validation-summary="All" class="alert alert-danger"></div>
 
-        <button type="submit" class="btn btn-primary btn-block">Register</button>
+            <div class="form-group">
+                <label asp-for="Email">Email: </label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <br>
 
-        <a href="/Account/Login" class="text-link">Already have an account? Login</a>
-    </form>
+            <div class="form-group">
+                <label asp-for="Password">Password: </label>
+                <input asp-for="Password" type="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label asp-for="ConfirmPassword">Confirm Password: </label>
+                <input asp-for="ConfirmPassword" type="password" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <br>
+
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+
+            <a href="/Account/Login" class="text-link">Already have an account? Login</a>
+        </form>
+    </div>
 </div>
 
 @section Scripts {
