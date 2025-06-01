@@ -61,7 +61,7 @@ namespace _367_project_repo_destroyersofevil.Controllers
                 new AuthenticationProperties
                 {
                     IsPersistent = true, // persists across browser sessions
-                    // ExpiresUtc = DateTimeOffset.UtcNow.AddHours(1) // optional
+                    
                 });
 
             // Redirect to the account dashboard
