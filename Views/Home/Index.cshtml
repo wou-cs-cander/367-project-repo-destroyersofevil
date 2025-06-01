@@ -5,8 +5,10 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-
+@* Moved this to site.css
 <style>
+     This should probably go in the global site.css stylesheet later
+    
     .center-container {
         display: flex;
         flex-direction: column;
@@ -21,7 +23,7 @@
         max-width: 400px;
     }
 </style>
-
+*@
 <div class="center-container">
     <h1>Welcome to the Fitness App</h1>
 
@@ -34,12 +36,14 @@
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
+            <br>
 
             <div class="form-group">
                 <label asp-for="Password"></label>
                 <input asp-for="Password" type="password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
+            <br>
 
             <button type="submit" class="btn btn-primary">Login</button>
         </form>
