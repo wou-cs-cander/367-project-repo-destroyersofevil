@@ -22,8 +22,4 @@
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\367-project-repo-destroyersofevil.csproj" />
-  </ItemGroup>
-
 </Project>
